@@ -24,7 +24,6 @@ const CheckoutScreen = () => {
       </div>
       <div className="checkout__right">
         <SubTotal />
-        <h2>The Subtotal will come here</h2>
       </div>
     </div>
   );
