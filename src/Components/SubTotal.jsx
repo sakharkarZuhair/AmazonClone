@@ -7,6 +7,12 @@ import { getBasketTotal } from "../ContextAPI/reducer";
 const SubTotal = () => {
   const [{ basket }, dispatch] = useStateValue();
 
+  const emptyCartHandler = () => {
+    dispatch({
+      type: "EMPTY_CART",
+    });
+  };
+
   return (
     <div className="subtotal">
       <CurrencyFormat
@@ -28,6 +34,7 @@ const SubTotal = () => {
         prefix={"$"}
       />
       <button>Proceed to Checkout</button>
+      <button onClick={emptyCartHandler}>Remove All Product</button>
     </div>
   );
 };
